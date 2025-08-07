@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 	"log"
-	internal "users_activity/internal"
+	internal "doc_activity/internal"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/contrib/websocket"
