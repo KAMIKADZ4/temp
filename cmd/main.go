@@ -64,7 +64,9 @@ func main() {
 				select {
 				case <-ticker.C:
 					// Send ping
+					conn.Lock()
 					err := conn.C.WriteMessage(websocket.TextMessage, []byte("ping"))
+					conn.UnLock()
 					if err != nil {
 						log.Println("ping error:", err)
 						return
